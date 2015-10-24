@@ -5,11 +5,11 @@ var Twit = require('twit');
 var T = new Twit(require('./config.js'));
 
 
-var mediaArtsSearch = {q: "#sajje", count: 1, result_type: "recent"}; 
+var sajjeSearch = {q: "#sajje", count: 1, result_type: "recent"}; 
 
 
 function retweetLatest() {
-	T.get('search/tweets', mediaArtsSearch, function (error, data) {
+	T.get('search/tweets', sajjeSearch, function (error, data) {
 	  
 	  console.log(error, data);
 	  
